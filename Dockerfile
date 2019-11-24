@@ -13,6 +13,8 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main' > /e
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886 99E82A75642AC823 && \
     apt-get update 
 
+RUN apt-get install --allow-change-held-packages --no-install-recommends sudo
+
 RUN echo oracle-java${JAVA_VER}-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections && \
     apt-get install -y --allow-change-held-packages --no-install-recommends oracle-java${JAVA_VER}-installer oracle-java${JAVA_VER}-set-default oracle-java${JAVA_VER}-unlimited-jce-policy
 
