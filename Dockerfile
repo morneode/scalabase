@@ -17,7 +17,7 @@ ENV SCALA_TARBALL http://www.scala-lang.org/files/archive/scala-$SCALA_VERSION.d
 # get latests from repo
 RUN apt-get update
 
-RUN apt-get install openjdk-8-jdk -y
+RUN apt-get install -y locales openjdk-8-jdk
 
 # RUN apt-get update && apt-get install -y software-properties-common sudo
 
