@@ -47,6 +47,7 @@ rm -rf /var/lib/apt/lists/*
 COPY . /root  
 WORKDIR /root  
 
+RUN java -version
 RUN scala -version
 RUN locale-gen en_US.UTF-8
 
